@@ -8,17 +8,36 @@
 	</head>
 	<body>
 		<main class="container">
+			<!-- Página: índice y detalle (controlado por app.js) -->
+			<!--
+			  Nota rápida:
+			  - app.js contiene los datos `COURSES` y la lógica de render.
+			  - URL `index.html?id=N` abre la vista de detalle para el curso N.
+			-->
+
+			<!-- Sección de detalle del curso (oculta por defecto). -->
 			<section id="course-detail" class="course-detail hidden">
+				<!-- Contenedor donde app.js inyecta el detalle del curso seleccionado -->
 				<a href="index.html" class="back">← Volver al catálogo</a>
-				<div id="course-detail-content"><!-- detalle renderizado por app.js --></div>
+				<div id="course-detail-content"><!-- detalle renderado por app.js --></div>
 			</section>
+			<!-- Encabezado principal y subtítulo -->
 			<h1>Catálogo de Cursos</h1>
 			<p class="subtitle">Haz clic en un curso para ver los detalles o abrir su URL externa.</p>
 
+			<!-- Barra de herramientas: búsqueda, toggle de tema y contador -->
+			<div class="toolbar">
+				<input id="search-input" class="search-input" type="search" placeholder="Filtrar cursos por nombre..." aria-label="Filtrar cursos por nombre" />
+				<button id="theme-toggle" class="btn btn-outline" aria-pressed="false">Modo claro</button>
+				<div id="results-count" class="results-count" aria-live="polite"></div>
+			</div>
+
+			<!-- Contenedor principal de tarjetas de cursos (renderizado por app.js) -->
 			<section id="courses-list" class="courses-list">
 				<!-- Lista de cursos se renderiza desde app.js -->
 			</section>
 
+			<!-- Sección con enlaces rápidos a cada curso (también renderizada por app.js) -->
 			<section id="courses-links" class="courses-links">
 				<h2>Enlaces rápidos</h2>
 				<ul id="links-list">
@@ -34,3 +53,4 @@
 		<script src="app.js"></script>
 	</body>
 </html>
+
