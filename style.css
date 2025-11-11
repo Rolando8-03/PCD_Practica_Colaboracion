@@ -44,6 +44,7 @@ h1{margin:0 0 8px}
 .course-detail{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);backdrop-filter: blur(6px)}
 footer{margin-top:20px;color:var(--muted)}
 
+/* Utilidades */
 /* Utilidad para ocultar secciones */
 .hidden{display:none !important}
 
