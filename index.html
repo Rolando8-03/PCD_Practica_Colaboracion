@@ -15,6 +15,12 @@
 			<h1>Catálogo de Cursos</h1>
 			<p class="subtitle">Haz clic en un curso para ver los detalles o abrir su URL externa.</p>
 
+			<div class="toolbar">
+				<input id="search-input" class="search-input" type="search" placeholder="Filtrar cursos por nombre..." aria-label="Filtrar cursos por nombre" />
+				<button id="theme-toggle" class="btn btn-outline" aria-pressed="false">Modo claro</button>
+				<div id="results-count" class="results-count" aria-live="polite"></div>
+			</div>
+
 			<section id="courses-list" class="courses-list">
 				<!-- Lista de cursos se renderiza desde app.js -->
 			</section>
