@@ -114,7 +114,7 @@ const COURSES = [
     actions.appendChild(openBtn);
 
     card.appendChild(actions);
-    // animación de entrada: mejora visual sin impacto funcional
+    // animación de entrada
     card.classList.add('fade-in');
     return card;
   }
@@ -127,30 +127,26 @@ const COURSES = [
    * - Efecto: actualiza `#courses-list`, `#links-list` y `#results-count`.
    */
   function render() {
-    // render: filtra datos (si hay búsqueda), genera tarjetas y lista de enlaces
-    // obtener texto de filtro (en minúsculas)
-    const filterText = (searchInput && searchInput.value) ? searchInput.value.trim().toLowerCase() : '';
+  const filterText = (searchInput && searchInput.value) ? searchInput.value.trim().toLowerCase() : '';
 
     if (!Array.isArray(COURSES)) {
       listEl.textContent = 'No hay cursos disponibles.';
       return;
     }
 
-  // Filtrar por título (si hay texto en el input)
+    // Filtrar por título (si hay texto en el input)
     const filtered = filterText ? COURSES.filter(c => c.title.toLowerCase().includes(filterText)) : COURSES.slice();
 
     listEl.innerHTML = '';
     if (filtered.length === 0) {
-      // mostrar mensaje cuando no hay coincidencias
       const empty = document.createElement('p');
       empty.textContent = 'No se encontraron cursos que coincidan con tu búsqueda.';
       listEl.appendChild(empty);
     } else {
-      // inyectar tarjetas filtradas
       filtered.forEach(c => listEl.appendChild(createCard(c)));
     }
 
-    // Actualizar contador de resultados (accesible) - ejemplo: "3 cursos encontrados"
+    // Actualizar contador de resultados (accesible)
     const resultsCount = document.getElementById('results-count');
     if (resultsCount) {
       resultsCount.textContent = `${filtered.length} curso${filtered.length === 1 ? '' : 's'} encontrado${filtered.length === 1 ? '' : 's'}`;
@@ -243,7 +239,7 @@ const COURSES = [
       };
     }
 
-  // Inicializar tema desde localStorage (persistencia de preferencia)
+    // Inicializar tema desde localStorage
     function setTheme(theme) {
       if (theme === 'light') {
         document.body.classList.add('light-theme');

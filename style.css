@@ -1,20 +1,4 @@
-/*
-	style.css - tema y estilos principales
-
-	Resumen general:
-	- Define variables CSS para un tema oscuro por defecto y un tema claro alternable.
-	- Contiene estilos para la estructura principal de la página: toolbar, tarjetas de
-		cursos, sección de detalle, lista de enlaces rápidos y utilidades (hidden, animaciones).
-
-	Contrato / elementos esperados:
-	- `body.light-theme` activa el tema claro (se usan las variables CSS redefinidas).
-	- Clases/IDs referenciadas por app.js: `#courses-list`, `#course-detail`, `#links-list`,
-		`.toolbar`, `.search-input`, `.course-card`, `.course-actions`, `.btn`, `.btn-outline`.
-
-	Notas de accesibilidad y UX:
-	- Se incluyen reglas para focus visible y animaciones suaves.
-	- Variables CSS facilitan cambios de colores y temas.
-*/
+/* Tema oscuro por defecto + modo claro alternable */
 :root{
 	--bg: #0b1020; /* fondo oscuro */
 	--surface: rgba(255,255,255,0.04);
@@ -25,9 +9,7 @@
 	--glass: rgba(255,255,255,0.04);
 }
 
-
-/* Tema claro (activar añadiendo la clase `light-theme` al <body>) */
-/* Redefine variables para inversión de colores y legibilidad en modo claro */
+/* Tema claro (aplicado con .light-theme en el body) */
 body.light-theme{
 	--bg: #f6f8fa;
 	--surface: rgba(0,0,0,0.03);
@@ -38,8 +20,6 @@ body.light-theme{
 	--glass: rgba(255,255,255,0.6);
 }
 
-
-/* Base y layout */
 *{box-sizing:border-box}
 body{font-family:Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;background:linear-gradient(180deg,var(--bg), #071028);margin:0;color:var(--text);-webkit-font-smoothing:antialiased}
 .container{max-width:980px;margin:40px auto;padding:24px}
@@ -52,20 +32,15 @@ h1{margin:0 0 8px}
 .search-input::placeholder{color:var(--muted)}
 .search-input:focus{box-shadow:0 6px 18px rgba(0,0,0,0.45);transform:translateY(-1px)}
 
-/* Lista de cursos (tarjetas) */
 .courses-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
 .course-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03);backdrop-filter: blur(8px);transition:transform 160ms ease, box-shadow 160ms ease}
 .course-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(2,6,23,0.7)}
 .course-card h2{font-size:1.05rem;margin:0 0 8px}
 .course-desc{color:var(--muted);margin:0 0 12px}
 .course-actions{display:flex;gap:8px}
-
-/* Botones y acciones */
 .btn{display:inline-block;padding:8px 10px;border-radius:8px;background:var(--accent);color:#071028;text-decoration:none;border:0;font-weight:600}
 .btn-outline{background:transparent;color:var(--accent);border:1px solid rgba(76,201,240,0.18);color:var(--accent)}
 .back{display:inline-block;margin-bottom:12px;color:var(--accent);text-decoration:none}
-
-/* Sección detalle */
 .course-detail{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);backdrop-filter: blur(6px)}
 footer{margin-top:20px;color:var(--muted)}
 
