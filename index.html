@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Lista de Cursos</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main class="container">
+			<section id="course-detail" class="course-detail hidden">
+				<a href="index.html" class="back">← Volver al catálogo</a>
+				<div id="course-detail-content"><!-- detalle renderizado por app.js --></div>
+			</section>
+			<h1>Catálogo de Cursos</h1>
+			<p class="subtitle">Haz clic en un curso para ver los detalles o abrir su URL externa.</p>
+
+			<section id="courses-list" class="courses-list">
+				<!-- Lista de cursos se renderiza desde app.js -->
+			</section>
+
+			<section id="courses-links" class="courses-links">
+				<h2>Enlaces rápidos</h2>
+				<ul id="links-list">
+					<!-- Lista de enlaces renderizada desde app.js -->
+				</ul>
+			</section>
+
+			<footer>
+				<small>PCD Práctica - Lista de cursos</small>
+			</footer>
+		</main>
+
+		<script src="app.js"></script>
+	</body>
+</html>
