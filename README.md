@@ -1,5 +1,10 @@
 # PCD_Practica_Colaboracion
-Repositorio de práctica colaborativa de la asignatura de Plataformas de Colaboración Digital
+Rol de cada integrante:
+Rolando: Líder del proyecto y coordinador de Tareas
+Fabiola: Documentadora y Control de calidad
+Moises: Desarrollador Principal
+Rolando: Gestor de Repositorio y Evidencias
+Carlos: Gestor de Repositorio y Evidencias
 
 Proyecto de Plataformas de Colaboración Digital
 Documentación Oficial del Repositorio
@@ -33,7 +38,7 @@ El proyecto fue desarrollado utilizando el lenguaje de programación asignado de
 
 Entre las herramientas y tecnologías empleadas se encuentran:
 
-Lenguaje principal del proyecto.
+Lenguaje principal del proyecto (HTML).
 
 Git y GitHub para control de versiones.
 

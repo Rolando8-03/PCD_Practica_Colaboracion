@@ -1,3 +1,4 @@
+/*Todo este código fue creado con ayuda de GitHubCopilot*/
 /*
   app.js - comportamiento y contrato (documentación inline)
 

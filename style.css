@@ -1,4 +1,5 @@
-/* Tema oscuro por defecto + modo claro alternable */
+/* Código generado con ayuda de GitHubCopilot */
+
 :root{
 	--bg: #0b1020; /* fondo oscuro */
 	--surface: rgba(255,255,255,0.04);
